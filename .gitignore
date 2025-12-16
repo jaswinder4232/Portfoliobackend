@@ -1,5 +1,5 @@
 # Ignore environment file
-# .env
+.env
 
 # Python
 __pycache__/
@@ -7,4 +7,4 @@ __pycache__/
 *.pyo
 
 # Virtual environment
-# venv/
+venv/
