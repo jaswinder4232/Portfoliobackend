@@ -34,3 +34,45 @@ class ContactAPIView(APIView):
             )
 
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+# ---------------- Projects ----------------
+class ProjectListCreateView(generics.ListCreateAPIView):
+    queryset = Project.objects.all()
+    serializer_class = ProjectSerializer
+
+
+class ProjectDetailView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Project.objects.all()
+    serializer_class = ProjectSerializer
+
+
+# ---------------- Categories ----------------
+class CategoryListCreateView(generics.ListCreateAPIView):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
+
+
+class CategoryDetailView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
+
+
+# ---------------- Stacks ----------------
+class StackListCreateView(generics.ListCreateAPIView):
+    queryset = Stack.objects.all()
+    serializer_class = StackSerializer
+
+
+class StackDetailView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Stack.objects.all()
+    serializer_class = StackSerializer
+
+
+# ---------------- Project Images ----------------
+class ProjectImageListCreateView(generics.ListCreateAPIView):
+    queryset = ProjectImage.objects.all()
+    serializer_class = ProjectImageSerializer
+
+
+class ProjectImageDetailView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = ProjectImage.objects.all()
+    serializer_class = ProjectImageSerializer
